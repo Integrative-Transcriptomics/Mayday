@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mayday</groupId>
+    <artifactId>mvnday</artifactId>
+    <packaging>pom</packaging>
+    <version>2.14</version>
+    <name>Meta for mayday</name>
+    <url>http://www.microarray-analysis.org/</url>
+
+    <modules>
+        <module>air</module>
+        <module>core</module>
+        <module>gaggle</module>
+        <module>level2</module>
+        <!--<module>libraries</module>-->
+        <module>mlearning</module>
+        <module>pathway</module>
+    </modules>
+</project>
