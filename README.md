@@ -13,6 +13,7 @@ Besides **java>=1.7** and you favorite IDE/editor, you need
 ## Source download directions
 
         git clone https://lambda.informatik.uni-tuebingen.de/gitlab/mayday/Mayday.git
+        cd Mayday
         ./setup.bash
 
 This will create a new folder *Mayday* at your current working directory.
@@ -26,7 +27,7 @@ select the file **pom.xml** within the *Mayday* folder.
 
 ### Eclipse
 
-1. Open/Create Workspace at the *Mayday*
+1. Open/Create Workspace at the *Mayday* folder
 2. File > Import
 3. General > Existing Projects into Workspace
 4. Choose the *Mayday* as the **root directory**
