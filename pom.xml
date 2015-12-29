@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mayday</groupId>
+    <artifactId>mayday</artifactId>
+    <version>2.14</version>
+    <packaging>pom</packaging>
+    <name>Meta for mayday</name>
+    <url>http://www.microarray-analysis.org/</url>
+
+    <modules>
+        <module>core</module>
+        <module>level2</module>
+        <module>mlearning</module>
+        <module>air</module>
+        <module>pathway</module>
+        <module>gaggle</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <!-- sign jnlp jar packages -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jarsigner-plugin</artifactId>
+                <version>1.2</version>
+                <configuration>
+                    <archiveDirectory>target</archiveDirectory>
+                    <removeExistingSignatures>true</removeExistingSignatures>
+                    <excludes>
+                        <!-- do not sign everything -->
+                        <exclude>*.jar</exclude>
+                    </excludes>
+                    <includes>
+                        <!-- just the jars in the jnlp folder -->
+                        <include>jnlp/**/*.jar</include>
+                    </includes>
+                    <keystore>${keystore}</keystore>
+                    <alias>${alias}</alias>
+                    <storepass>${storepass}</storepass>
+                    <keypass>${keypass}</keypass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
