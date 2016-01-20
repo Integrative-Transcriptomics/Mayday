@@ -17,6 +17,7 @@ mvn eclipse:eclipse
 # a few files can not be found in any repository
 # -> manual add to local maven repo
 cd libraries
+
 # URL: http://sourceforge.net/projects/java-registry/
 mvn install:install-file -Dfile=WinRegistry-4.5.jar \
     -DgroupId=at.jta -DartifactId=WinRegistry \
@@ -45,6 +46,13 @@ mvn install:install-file -Dfile=nux-1.6.jar \
 mvn install:install-file -Dfile=jdbc2_0-stdext.jar \
     -DgroupId=javax.sql -DartifactId=jdbc-stdext \
     -Dversion=2.0 -Dpackaging=jar
+# Dockingframes
+mvn install:install-file -Dfile=docking-frames-common-1.1.2.jar \
+    -DgroupId=bibliothek.gui.dock -DartifactId=docking-frames-common \
+    -Dversion=1.1.2 -Dpackaging=jar
+mvn install:install-file -Dfile=docking-frames-core-1.1.2.jar \
+    -DgroupId=bibliothek.gui.dock -DartifactId=docking-frames-core \
+    -Dversion=1.1.2 -Dpackaging=jar
 cd ..
 
 echo "DONE."
