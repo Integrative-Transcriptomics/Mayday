@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/air/air.iml" filepath="$PROJECT_DIR$/air/air.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gaggle/gaggle.iml" filepath="$PROJECT_DIR$/gaggle/gaggle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/level2/level2.iml" filepath="$PROJECT_DIR$/level2/level2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mayday.iml" filepath="$PROJECT_DIR$/mayday.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mlearning/mlearning.iml" filepath="$PROJECT_DIR$/mlearning/mlearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pathway/pathway.iml" filepath="$PROJECT_DIR$/pathway/pathway.iml" />
+    </modules>
+  </component>
+</project>

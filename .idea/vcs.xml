@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/air" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gaggle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/level2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libraries" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mlearning" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pathway" vcs="Git" />
+  </component>
+</project>

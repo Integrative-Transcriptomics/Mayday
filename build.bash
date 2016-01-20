@@ -35,12 +35,6 @@ for i in $BUILDORDER ; do
     cp -R $i/target/jnlp/* target/jnlp
 done
 
-# Merge all Jnlp folders into one
-mkdir -p target/jnlp
-for i in $BUILDORDER ; do
-    cp -R $i/target/jnlp/* target/jnlp
-done
-
 # Add jnlp to link plugins
 # make $CODEBASE save for sed use
 CODE2=$(echo "$JNLP_CODEBASE" | sed -e 's/[\/&]/\\&/g')
@@ -80,7 +74,7 @@ cd ../../..
 
 
 # Sign jars in jnlp folders
-mvn jarsigner:sign -Dkeystore="$KEYSTORE" -Dalias=$ALIAS -Dkeypass=$KEYPASS -Dstorepass=$STOREPASS
+mvn jarsigner:sign -Dkeystore="$KEYSTORE" -Dalias=$ALIAS -Dkeypass=$KEYPASS -Dstorepass=$STOREPASS || exit -1
 
 # add images
 IMG_PATH="core/src/main/resources/mayday/images/"
