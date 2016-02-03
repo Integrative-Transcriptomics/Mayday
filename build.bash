@@ -31,7 +31,9 @@ done
 
 # Merge all Jnlp folders into one
 mkdir -p target/jnlp
-for i in $BUILDORDER ; do
+for (( idx=${#BUILDORDER[@]}-1 ; idx>=0 ; idx-- )) ; do
+    # reversed buildorder to prevent overwriting jars with older versions
+    i="${BUILDORDER[idx]}"
     cp -R $i/target/jnlp/* target/jnlp
 done
 
