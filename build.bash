@@ -16,11 +16,11 @@ ALIAS=myself
 KEYPASS=123456
 
 # Build order according to dependencies between modules
-BUILDORDER="core level2 mlearning pathway air gaggle"
+BUILDORDER=(core level2 mlearning pathway air gaggle)
 
 # Compile/Build jars and push them into local repository
 # + Create webstart folder, which conveniently also contains all dependencies
-for i in $BUILDORDER ; do
+for i in ${BUILDORDER[@]} ; do
     cd $i
     # build + push to repo
     mvn install || exit -1
@@ -31,6 +31,7 @@ done
 
 # Merge all Jnlp folders into one
 mkdir -p target/jnlp
+# Iterate over reversed BUILDORDER
 for (( idx=${#BUILDORDER[@]}-1 ; idx>=0 ; idx-- )) ; do
     # reversed buildorder to prevent overwriting jars with older versions
     i="${BUILDORDER[idx]}"
@@ -55,16 +56,17 @@ EOF
 
 # Update manifests
 for i in *.jar ; do
-    jar umf manifestupdate.txt $i
+    jar umf manifestupdate.txt $i 2>&1 1>/dev/null
 done
 
 # Mayday requires explicit lists of Plugins and Resources
-for i in $BUILDORDER ; do
+for i in ${BUILDORDER[@]} ; do
     JAR=${i}*.jar
+    echo "Bewitching $JAR"
     # Scan jar for plugins and resources
-    java -cp core-*.jar mayday.core.pluma.buildsystem.PrepareJar $JAR .
+    java -cp core-*.jar mayday.core.pluma.buildsystem.PrepareJar $JAR . 1>/dev/null
     # Update manifest and add resource list
-    jar umf plugins.mf $JAR resources_list.txt || exit -1
+    jar umf plugins.mf $JAR resources_list.txt 2>&1 1>/dev/null || exit -1
     # Remove for next iteration
     rm plugins.mf
     rm resources_list.txt
