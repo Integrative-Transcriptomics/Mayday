@@ -9,7 +9,13 @@
     <version>2.14</version>
     <packaging>pom</packaging>
     <name>Meta for mayday</name>
-    <url>http://www.microarray-analysis.org/</url>
+    <organization>
+        <name>
+            Integrative Transcriptomics, Center for Bioinformatics,
+            University of Tuebingen, Germany
+        </name>
+    </organization>
+    <url>http://www.it.informatik.uni-tuebingen.de</url>
 
     <modules>
         <module>core</module>
@@ -25,7 +31,7 @@
         you can make it an eclipse project with
         mvn eclipse:eclipse
          -->
-        <!--module>incubator</module-->
+        <module>incubator</module>
     </modules>
 
     <build>
