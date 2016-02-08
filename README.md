@@ -24,8 +24,6 @@ This will create a new folder *Mayday* at your current working directory.
 
 Choose the **Create new Project from existing source** option, and
 select the file **pom.xml** within the *Mayday* folder.
-Afterwards, add the **Mayday/libraries** folder to the project libraries
-in the **project settings > Libraries > '+'**.
 
 ### Eclipse
 
