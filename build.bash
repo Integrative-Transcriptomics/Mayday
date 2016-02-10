@@ -53,6 +53,8 @@ Codebase: $JAR_CODEBASE
 Caller-Allowable-Codebase: $JAR_CODEBASE
 Application-Library-Allowable-Codebase: $JAR_CODEBASE
 Trusted-Library: true
+Trusted-Only: true
+Application-Name: Mayday
 EOF
 
 # Update manifests
