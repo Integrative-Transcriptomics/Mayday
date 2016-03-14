@@ -1,0 +1,29 @@
+----------------------------------
+Version: tba
+
+
+----------------------------------
+Version: 2.15, March 2016
+
+- Added newest Reveal version
+- Introduce new certificate for webstarter
+- Update maven pom.xml file for improved dependencies management
+- Introduced tessellation for clearer fonts in 3D plots
+- User can select separation string in 'Summarization on display names'
+
+New Plugins & Plots:
+- Reveal
+- CorrelationMatrix
+- Split Trees
+- Scriptable BoxPlots
+
+Bug fixes:
+- Fix 3D plots for high-def screens
+- Return control over an 3D plot after export
+- Selections in 3D PCA and 3D Scatter plot are not highlighted properly
+
+
+----------------------------------
+Version: 2.14
+
+Beginning of this file
