@@ -10,10 +10,12 @@ Version: 2.15, March 2016
 - Update maven pom.xml file for improved dependencies management
 - Introduced tessellation for clearer fonts in 3D plots
 - User can select separation string in 'Summarization on display names'
+- Allow user to search for probe names in tables with 'View > Find Probe ...'
 
 New Plugins & Plots:
 - Reveal
 - CorrelationMatrix
+- Correlation HeatMap
 - Split Trees
 - Scriptable BoxPlots
 
