@@ -24,6 +24,9 @@ This will create a new folder *Mayday* at your current working directory.
 
 Choose the **Create new Project from existing source** option, and
 select the file **pom.xml** within the *Mayday* folder.
+When running Mayday from the IDE, please set the *classpath from module*
+option in the run configurations, because the additional dependencies or a module
+would not be loaded.
 
 ### Eclipse
 
