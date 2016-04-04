@@ -11,6 +11,7 @@ Version: 2.15, March 2016
 - Introduced tessellation for clearer fonts in 3D plots
 - User can select separation string in 'Summarization on display names'
 - Allow user to search for probe names in tables with 'View > Find Probe ...'
+- Addedd Loess regression to MA plots
 
 New Plugins & Plots:
 - Reveal
