@@ -3,7 +3,7 @@ Version: tba
 
 
 ----------------------------------
-Version: 2.15, March 2016
+Version: 2.30, April 2016
 
 - Added newest Reveal version
 - Introduce new certificate for webstarter
@@ -19,14 +19,17 @@ New Plugins & Plots:
 - Correlation HeatMap
 - Split Trees
 - Scriptable BoxPlots
+- ID mapping with genenames.org
+- possibility of showing picard metrics for SAM/BAM files in seasight
 
 Bug fixes:
 - Fix 3D plots for high-def screens
 - Return control over an 3D plot after export
 - Selections in 3D PCA and 3D Scatter plot are not highlighted properly
 
+General Notes:
+- Introduced HGNC lookup for probes
 
 ----------------------------------
-Version: 2.14
 
-Beginning of this file
+(Beginning of this file, there was no changelog for earlier versions.)

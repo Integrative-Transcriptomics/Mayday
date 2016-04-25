@@ -6,7 +6,7 @@
 
     <groupId>mayday</groupId>
     <artifactId>mayday</artifactId>
-    <version>2.14</version>
+    <version>2.30</version>
     <packaging>pom</packaging>
     <name>Meta for mayday</name>
     <organization>
@@ -31,7 +31,7 @@
         you can make it an eclipse project with
         mvn eclipse:eclipse
          -->
-        <module>incubator</module>
+        <!--module>incubator</module-->
     </modules>
 
     <build>
