@@ -90,9 +90,9 @@ cp ${IMG_PATH}/icon32.gif target/jnlp/
 
 
 # Bundle jars together for a standalone version
-mkdir -p target/jnlp/Mayday/plugins
+mkdir -p target/jnlp/Mayday
 cd target/jnlp/Mayday
-cp -R target/jnlp/jars plugins
+cp -R ../jars plugins
 # Make 'executables'
 for i in 6 8 16 ; do
 cat > mayday_${i}.bat << EOF
