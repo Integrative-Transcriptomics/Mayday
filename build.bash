@@ -89,7 +89,31 @@ cp ${IMG_PATH}/splash.png target/jnlp/
 cp ${IMG_PATH}/icon32.gif target/jnlp/
 
 
-echo "Deploy the content of the folder target/jnlp to $JNLP_CODEBASE"
+# Bundle jars together for a standalone version
+mkdir -p target/jnlp/Mayday/plugins
+cd target/jnlp/Mayday
+cp -R target/jnlp/jars plugins
+# Make 'executables'
+for i in 6 8 16 ; do
+cat > mayday_${i}.bat << EOF
+@ECHO OFF
+start java -Xms512m -Xmx${i}G -jar plugins/core-*.jar
+EOF
+
+cat > mayday_${i}.sh << EOF
+#!/bin/bash
+java -Xms512m -Xmx${i}G -jar plugins/core-*.jar
+EOF
+done
+
+# zip up
+cd ..
+zip -r Mayday Mayday
+rm -rf Mayday
+#back to workspace
+cd ../..
+
+echo "Deploy the content of the folder target/jnlp to ${JNLP_CODEBASE}"
 echo "(most likely with the scp command)"
 
 echo "DONE."
