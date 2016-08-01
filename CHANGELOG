@@ -2,6 +2,11 @@
 Version: tba
 
 
+Minor Changes:
+- Added explicit parameter for padding identifiers in the correlation heatmap
+  of experiments.
+
+
 ----------------------------------
 Version: 2.30, April 2016
 
