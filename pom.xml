@@ -18,12 +18,12 @@
     <url>http://www.it.informatik.uni-tuebingen.de</url>
 
     <modules>
-        <module>core</module>
-        <module>level2</module>
-        <module>mlearning</module>
-        <module>air</module>
-        <module>pathway</module>
-        <module>gaggle</module>
+        <module>Mayday-core</module>
+        <module>Mayday-level2</module>
+        <module>Mayday-mlearning</module>
+        <module>Mayday-air</module>
+        <module>Mayday-pathway</module>
+        <module>Mayday-gaggle</module>
         <!--
         uncomment if you are an internal developer
         you must manually import the module code with

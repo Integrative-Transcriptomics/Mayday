@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
 
-modules=( air core gaggle level2 mlearning pathway )
-giturl="https://lambda.informatik.uni-tuebingen.de/gitlab/mayday"
+modules=( Mayday-air Mayday-core Mayday-gaggle Mayday-level2 Mayday-mlearning Mayday-pathway )
+giturl="https://github.com/Integrative-Transcriptomics"
 
 
 # download sources
 for i in ${modules[@]} ; do
     git clone "$giturl/$i.git"
 done
-git clone "$giturl/libraries.git"
+git clone "$giturl/Mayday-libraries.git"
 
 # create eclipse project data
 mvn eclipse:eclipse
 
 # a few files can not be found in any repository
 # -> manual add to local maven repo
-cd libraries
+cd Mayday-libraries
 
 # URL: http://sourceforge.net/projects/java-registry/
 mvn install:install-file -Dfile=WinRegistry-4.5.jar \
