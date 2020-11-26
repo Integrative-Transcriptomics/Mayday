@@ -16,7 +16,8 @@ ALIAS=myself
 KEYPASS=123456
 
 # Build order according to dependencies between modules
-BUILDORDER=(core level2 mlearning pathway air gaggle)
+BUILDORDER=(Mayday-core Mayday-level2 Mayday-mlearning Mayday-pathway Mayday-air Mayday-gaggle)
+JARNAMES=(core level2 mlearning pathway air gaggle)
 
 # Compile/Build jars and push them into local repository
 # + Create webstart folder, which conveniently also contains all dependencies
@@ -63,7 +64,7 @@ for i in *.jar ; do
 done
 
 # Mayday requires explicit lists of Plugins and Resources
-for i in ${BUILDORDER[@]} ; do
+for i in ${JARNAMES[@]} ; do
     JAR=${i}*.jar
     echo "Bewitching $JAR"
     # Scan jar for plugins and resources
