@@ -27,11 +27,11 @@
         <!--
         uncomment if you are an internal developer
         you must manually import the module code with
-        git clone http://lambda.informatik.uni-tuebingen.de/gitlab/mayday/incubator.git
+        git clone https://github.com/Integrative-Transcriptomics/Mayday-incubator.git
         you can make it an eclipse project with
         mvn eclipse:eclipse
          -->
-        <!--module>incubator</module-->
+        <!--module>Mayday-incubator</module-->
     </modules>
 
     <build>
